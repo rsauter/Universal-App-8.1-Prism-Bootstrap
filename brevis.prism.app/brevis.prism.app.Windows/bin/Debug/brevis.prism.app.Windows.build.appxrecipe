@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>RS-SURFACEPRO3</Machine>
+    <WindowsUser>Roger</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows 8.1</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>0b7d4088-5dd2-42f4-be3f-205888893abf</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\brevis.prism.app\brevis.prism.app.Windows\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\brevis.prism.app\brevis.prism.app.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\brevis.prism.app\brevis.prism.app.Windows\bin\Debug\brevis.prism.app.Windows.exe">
+      <PackagePath>brevis.prism.app.Windows.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\packages\Prism.Mvvm.1.1.1\lib\windows8\Microsoft.Practices.Prism.Mvvm.dll">
+      <PackagePath>Microsoft.Practices.Prism.Mvvm.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\packages\Prism.Mvvm.1.1.1\lib\windows8\Microsoft.Practices.Prism.Mvvm.Store.dll">
+      <PackagePath>Microsoft.Practices.Prism.Mvvm.Store.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\packages\Prism.PubSubEvents.1.1.2\lib\portable-sl5+windowsphone8+windows8+net40+wpa81\Microsoft.Practices.Prism.PubSubEvents.dll">
+      <PackagePath>Microsoft.Practices.Prism.PubSubEvents.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\packages\Prism.Mvvm.1.1.1\lib\windows8\Microsoft.Practices.Prism.SharedInterfaces.dll">
+      <PackagePath>Microsoft.Practices.Prism.SharedInterfaces.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\packages\Prism.StoreApps.2.0.0\lib\windows8\Microsoft.Practices.Prism.StoreApps.dll">
+      <PackagePath>Microsoft.Practices.Prism.StoreApps.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\packages\Prism.StoreApps.2.0.0\lib\windows8\Microsoft.Practices.Prism.StoreApps.Windows.dll">
+      <PackagePath>Microsoft.Practices.Prism.StoreApps.Windows.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
+      <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\packages\Unity.4.0.1\lib\win8\Microsoft.Practices.Unity.dll">
+      <PackagePath>Microsoft.Practices.Unity.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\packages\Unity.4.0.1\lib\win8\Microsoft.Practices.Unity.RegistrationByConvention.dll">
+      <PackagePath>Microsoft.Practices.Unity.RegistrationByConvention.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\packages\Newtonsoft.Json.8.0.2\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\brevis.prism.app\brevis.prism.app.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\brevis.prism.app\brevis.prism.app.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\brevis.prism.app\brevis.prism.app.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\brevis.prism.app\brevis.prism.app.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\brevis.prism.app\brevis.prism.app.Windows\bin\Debug\brevis.prism.app.Windows.xr.xml">
+      <PackagePath>brevis.prism.app.Windows.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\brevis.prism.app\brevis.prism.app.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\brevis.prism.app\brevis.prism.app.Windows\bin\Debug\Controls\FlyoutMenu.xbf">
+      <PackagePath>Controls\FlyoutMenu.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\brevis.prism.app\brevis.prism.app.Windows\bin\Debug\Controls\PageHeader.xbf">
+      <PackagePath>Controls\PageHeader.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\brevis.prism.app\brevis.prism.app.Windows\bin\Debug\Themes\ItemTemplates.xbf">
+      <PackagePath>Themes\ItemTemplates.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\brevis.prism.app\brevis.prism.app.Windows\bin\Debug\Themes\Styles.xbf">
+      <PackagePath>Themes\Styles.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\brevis.prism.app\brevis.prism.app.Windows\bin\Debug\Views\MainPage.xbf">
+      <PackagePath>Views\MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\brevis.prism.app\brevis.prism.app.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

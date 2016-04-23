@@ -1,0 +1,271 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:prism="using:Microsoft.Practices.Prism.StoreApps">
+
+
+    <DataTemplate x:Key="BoardsPageBoardItemTemplate">
+        <Grid Margin="0 0 0 5"
+              Background="{StaticResource DataItemBackground2Brush}" MinHeight="105" MaxHeight="105" HorizontalAlignment="Stretch">
+            
+            <TextBlock Grid.Column="1" Grid.Row="0" 
+                           Style="{StaticResource DataItemHeader}"
+                           Text="{Binding Name}" />
+
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="MainPageVideoItemTemplate">
+        <Grid Margin="0 0 0 5" MinWidth="480" MaxWidth="480" MinHeight="105" MaxHeight="105"
+                  Background="{StaticResource DataItemBackground2Brush}">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Column="0" 
+                   Source="{Binding Thumbnail120x90Uri}" 
+                   Width="120" Height="90"
+                   Margin="5 0" />
+
+            <StackPanel Grid.Column="1" VerticalAlignment="Bottom" Height="50">
+                <TextBlock Style="{StaticResource DataItemHeader}"
+                        Text="{Binding Header}" />
+                <TextBlock Style="{StaticResource DataItemSubHeader}" 
+                        Text="{Binding SubHeader}" Height="50" VerticalAlignment="Bottom" TextWrapping="Wrap" />
+
+            </StackPanel>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="DashboardCurrentGame">
+        <Grid Grid.Row="1" Margin="0 4 0 5"
+                                          Background="{StaticResource DataItemBackground2Brush}"
+                                          MinWidth="400" MaxWidth="400" VerticalAlignment="Stretch" MinHeight="400">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+
+
+            <!-- EVENTDATETIME -->
+            <Grid Grid.Column="0"
+                                              Margin="0 0 5 0"
+                                              Background="{StaticResource DataItemBackground1Brush}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="0" Grid.Row="0"
+                                                       Style="{StaticResource DataItemPictPlaceHolder}"
+                                                       Text="{Binding CurrentGame.EventDatePartDayNumber}" />
+
+                <TextBlock Grid.Column="0" Grid.Row="1" 
+                                                       Style="{StaticResource DataItemSubHeader}" 
+                                                       HorizontalAlignment="Center"
+                                                       Text="{Binding CurrentGame.EventDatePartMonth}" />
+
+                <StackPanel Grid.Column="0" Grid.Row="2" 
+                                                        Orientation="Horizontal"
+                                                        HorizontalAlignment="Center">
+                    <SymbolIcon Symbol="Clock"  
+                                                            Foreground="{StaticResource DataItemForegroundBrush}"/>
+                    <TextBlock Style="{StaticResource DataItemSubHeader}"
+                                                           Text="{Binding CurrentGame.EventDatePartTime}" VerticalAlignment="Center" />
+                </StackPanel>
+            </Grid>
+
+
+            <!-- GAME DETAILS -->
+            <Grid Grid.Column="1" Width="380">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0"
+                                           Style="{StaticResource DataItemHeader}"
+                                           Text="{Binding CurrentGame.Header}" />
+                <TextBlock Grid.Row="1"
+                                           Style="{StaticResource DataItemSubHeader}"
+                                           Text="{Binding CurrentGame.SubHeader}" />
+
+                <HyperlinkButton Grid.Row="2" x:Uid="VenueWebLink" Content="Venue" 
+                                                 Style="{StaticResource WebLinkButton}" 
+                                                 NavigateUri="{Binding CurrentGame.Location.StadiumUri}" 
+                                                 Visibility="{Binding CurrentGame.Location.StadiumUri, Converter={StaticResource HasvalueToVisibilityConverter}}"/>
+                <HyperlinkButton Grid.Row="3" x:Uid="VenueGeolocationWebLink" 
+                                                 Content="VenueGeolocation" Style="{StaticResource WebLinkButton}" 
+                                                 NavigateUri="{Binding CurrentGame.Location.MapUri}" 
+                                                 Visibility="{Binding CurrentGame.Location.MapUri, Converter={StaticResource HasvalueToVisibilityConverter}}"/>
+
+                <TextBlock x:Uid="Referees" 
+                                           Text="Referees" 
+                                           Grid.Row="5" 
+                                           Style="{StaticResource DataItemLabel}"/>
+                <TextBlock Grid.Row="6" 
+                                           Width="278"
+                                           HorizontalAlignment="Left"
+                                           Style="{StaticResource DataItemSubHeader}" 
+                                           Text="{Binding CurrentGame.Referee1}" 
+                                           TextWrapping="Wrap"/>
+                <TextBlock Grid.Row="7" 
+                                           Width="278"
+                                           HorizontalAlignment="Left"
+                                           Style="{StaticResource DataItemSubHeader}" 
+                                           Text="{Binding CurrentGame.Referee2}" 
+                                           TextWrapping="Wrap"/>
+                <TextBlock Grid.Row="8" 
+                                           Width="278"
+                                           HorizontalAlignment="Left"
+                                           Style="{StaticResource DataItemSubHeader}" 
+                                           Text="{Binding CurrentGame.Referee3}" 
+                                           TextWrapping="Wrap"/>
+                <TextBlock Grid.Row="9" 
+                                           Width="278"
+                                           HorizontalAlignment="Left"
+                                           Style="{StaticResource DataItemSubHeader}" 
+                                           Text="{Binding CurrentGame.Referee4}" 
+                                           TextWrapping="Wrap"/>
+
+                <HyperlinkButton Grid.Row="11" 
+                                                 x:Uid="OfficialGameDetailsWebLink" 
+                                                 Content="OfficialGameDetails" 
+                                                 NavigateUri="{Binding CurrentGame.GameUri}"
+                                                 Visibility="{Binding CurrentGame.AssociationGameId, Converter={StaticResource HasvalueToVisibilityConverter}}"
+                                                 Style="{StaticResource WebLinkButton}" />
+
+            </Grid>
+        </Grid>
+    </DataTemplate>
+
+
+    <!-- LIST ITEMS -->
+    <DataTemplate x:Key="GameItemTemplate">
+        <Grid HorizontalAlignment="Stretch" 
+              Margin="0 0 0 5"
+                  Background="{StaticResource DataItemBackground2Brush}"
+                  MinWidth="{Binding ElementName=gamesList ,Path=ActualWidth}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- EVENTDATETIME -->
+            <Grid Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Margin="0 0 5 0"
+                      Background="{StaticResource DataItemBackground1Brush}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="0" Grid.Row="0"
+                               Style="{StaticResource DataItemPictPlaceHolder}"
+                               Text="{Binding EventDatePartDayNumber}" />
+
+                <TextBlock Grid.Column="0" Grid.Row="1" 
+                               Style="{StaticResource DataItemSubHeader}" 
+                               HorizontalAlignment="Center"
+                               Text="{Binding EventDatePartMonth}" />
+
+                <StackPanel Grid.Column="0" Grid.Row="2" 
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <SymbolIcon Symbol="Clock"  
+                                Foreground="{StaticResource DataItemForegroundBrush}"/>
+                    <TextBlock 
+                               Style="{StaticResource DataItemSubHeader}"
+                               Text="{Binding EventDatePartTime}" />
+                </StackPanel>
+            </Grid>
+
+
+            <!-- OPPONENT / LOCATION -->
+            <TextBlock Grid.Column="1" Grid.Row="0" 
+                           Style="{StaticResource DataItemHeader}"
+                           Text="{Binding Header}" />
+
+            <TextBlock Grid.Column="1" Grid.Row="1" 
+                           Style="{StaticResource DataItemSubHeader}" 
+                           Text="{Binding SubHeader}" />
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="PlayerItemTemplate">
+        <Grid Margin="0 0 0 5" MinWidth="400"
+                  Background="{StaticResource DataItemBackground2Brush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- JERSEYNR. / COUNTRY -->
+            <Grid Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Margin="0 0 5 0"
+                      Background="{StaticResource DataItemBackground1Brush}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Column="0" Grid.Row="0" 
+                               Style="{StaticResource DataItemPictPlaceHolder}"
+                               Text="{Binding DefaultJerseyNumber}" />
+                <TextBlock Grid.Column="0" Grid.Row="1"
+                               Style="{StaticResource DataItemSubHeader}"
+                               HorizontalAlignment="Center"
+                               Text="{Binding Country}" />
+
+            </Grid>
+
+
+            <TextBlock Grid.Column="2" Grid.Row="0" Style="{StaticResource DataItemHeader}"
+                        Text="{Binding Header}" />
+
+            <TextBlock Grid.Column="2" Grid.Row="1" Style="{StaticResource DataItemSubHeader}" 
+                        Text="{Binding SubHeader}" />
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="LinkItemTemplate">
+
+        <HyperlinkButton Content="{Binding Title}"
+                                     NavigateUri="{Binding Uri}"
+                                     Style="{StaticResource WebLinkButtonBright}"
+                                     VerticalAlignment="Top">
+        </HyperlinkButton>
+
+    </DataTemplate>
+
+</ResourceDictionary>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>539f2d17-9dd9-4ef0-ad8e-345664191361</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>brevis.prism.app</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Business\ApplicationServices\AlertMessageService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Business\ApplicationServices\AppSettingsService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Business\ApplicationServices\NotificationService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Business\ApplicationServices\ServiceBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\CacheHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\CryptoHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\NavigationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contracts\ApplicationServices\IAlertMessageService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contracts\ApplicationServices\IAppSettingsService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contracts\ApplicationServices\INotificationService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contracts\Exceptions\BusinessException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contracts\Models\DialogCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\FlyoutMenu.xaml.cs">
+      <DependentUpon>FlyoutMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\PageHeader.xaml.cs">
+      <DependentUpon>PageHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\HasValueToVisibilityConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Infrastructure\CacheItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Infrastructure\JsonCacheItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Infrastructure\RemoteServices\DtoBusinessObjectMapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\PageBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\ViewModels\DataViewModels\BusinessObjectDataViewModelMapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\ViewModels\DataViewModels\DataViewModelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\ViewModels\DesignViewModels\DesignPageViewModelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\ViewModels\DesignViewModels\MainDesignPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\ViewModels\MainPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\ViewModels\PageViewModelBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Contracts\Enums\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Contracts\RemoteServices\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Contracts\Repositories\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Behaviors\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\de-CH\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\FlyoutMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\PageHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Themes\ItemTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Themes\Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+</Project>

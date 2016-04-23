@@ -1,0 +1,23 @@
+﻿<prismmvvm:MvvmAppBase x:Class="brevis.prism.app.App"
+                       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                       xmlns:converters="using:brevis.prism.app.Converters"
+                       xmlns:local="using:brevis.prism.app"
+                       xmlns:prismmvvm="using:Microsoft.Practices.Prism.Mvvm">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/Styles.xaml" />
+                <ResourceDictionary Source="Themes/ItemTemplates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary.ThemeDictionaries />
+
+            <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+            <converters:HasValueToVisibilityConverter x:Key="HasvalueToVisibilityConverter" />
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+
+</prismmvvm:MvvmAppBase>

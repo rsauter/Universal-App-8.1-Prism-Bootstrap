@@ -1,0 +1,27 @@
+﻿<local:PageBase
+    x:Class="brevis.prism.app.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="using:brevis.prism.app.Views"
+    xmlns:designViewModels="using:brevis.prism.app.UI.ViewModels.DesignViewModels"
+    xmlns:mvvm="using:Microsoft.Practices.Prism.Mvvm"
+    xmlns:userControl="using:brevis.prism.app.Controls"
+    d:DataContext="{d:DesignInstance designViewModels:MainDesignPageViewModel, IsDesignTimeCreatable=True}"
+    mc:Ignorable="d"
+    mvvm:ViewModelLocator.AutoWireViewModel="true">
+
+    <Grid VerticalAlignment="Stretch" Style="{StaticResource WrapperGrid}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <userControl:FlyoutMenu x:Name="flyoutMenu"
+                                Grid.RowSpan="2"
+                                Canvas.ZIndex="1000" />
+        <userControl:PageHeader x:Name="pageHeader" />
+
+    </Grid>
+</local:PageBase>
+
