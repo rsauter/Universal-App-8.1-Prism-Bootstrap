@@ -1,1 +1,1 @@
-C:\Users\Roger\OneDrive\Sourcecodes\Universal App 8.1 Prism Bootstrap\brevis.prism.app\brevis.prism.app.Windows\brevis.prism.app.Windows.csproj;neutral
+C:\git\github\rsauter\Universal-App-8.1-Prism-Bootstrap\brevis.prism.app\brevis.prism.app.Windows\brevis.prism.app.Windows.csproj;neutral
